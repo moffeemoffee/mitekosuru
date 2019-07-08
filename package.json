@@ -5,29 +5,23 @@
     "author": "Femo Bayani <festbawi@gmail.com>",
     "license": "MIT",
     "private": true,
-    "preferGlobal": true,
     "bin": {
-        "mitekosuru": "./bin/index.js"
+        "mitekosuru": "./bin/mitekosuru.js"
     },
     "dependencies": {
         "chalk": "^2.4.2",
         "commander": "^2.20.0",
+        "inquirer": "^6.4.1",
         "lodash": "^4.17.11",
-        "ora": "^3.4.0",
         "winston": "^3.2.1",
         "x-ray": "^2.3.3"
     },
     "devDependencies": {
-        "babel-eslint": "^10.0.2",
         "eslint": "^5.16.0",
-        "eslint-config-airbnb-base": "^13.2.0",
-        "eslint-config-prettier": "^6.0.0",
         "eslint-config-standard": "^12.0.0",
         "eslint-plugin-import": "^2.18.0",
         "eslint-plugin-node": "^9.1.0",
-        "eslint-plugin-prettier": "^3.1.0",
         "eslint-plugin-promise": "^4.2.1",
-        "eslint-plugin-standard": "^4.0.0",
-        "prettier": "^1.18.2"
+        "eslint-plugin-standard": "^4.0.0"
     }
 }
