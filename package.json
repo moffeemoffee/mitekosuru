@@ -10,11 +10,14 @@
     },
     "dependencies": {
         "chalk": "^2.4.2",
+        "cheerio": "^1.0.0-rc.3",
+        "cheerio-get-css-selector": "^2.0.0",
         "commander": "^2.20.0",
         "inquirer": "^6.4.1",
         "lodash": "^4.17.11",
-        "winston": "^3.2.1",
-        "x-ray": "^2.3.3"
+        "parse-numeric-range": "^0.0.2",
+        "puppeteer": "^1.18.1",
+        "winston": "^3.2.1"
     },
     "devDependencies": {
         "eslint": "^5.16.0",

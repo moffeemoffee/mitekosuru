@@ -17,5 +17,8 @@
     "parserOptions": {
         "ecmaVersion": 2019
     },
-    "rules": {}
+    "rules": {
+        "arrow-parens": ["error", "always"],
+        "comma-dangle": ["error", "always-multiline"]
+    }
 }

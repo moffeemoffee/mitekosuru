@@ -12,5 +12,5 @@ module.exports = createLogger({
       info => `[${chalk.magenta('Mitekosuru')}] ${info.timestamp} ${info.level}: ${info.message}`
     )
   ),
-  transports: [new transports.Console()]
+  transports: [new transports.Console({ level: 'debug' })]
 })
