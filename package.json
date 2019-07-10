@@ -13,10 +13,13 @@
         "cheerio": "^1.0.0-rc.3",
         "cheerio-get-css-selector": "^2.0.0",
         "commander": "^2.20.0",
+        "fs-extra": "^8.1.0",
         "inquirer": "^6.4.1",
         "lodash": "^4.17.11",
+        "ora": "^3.4.0",
         "parse-numeric-range": "^0.0.2",
         "puppeteer": "^1.18.1",
+        "sanitize-filename": "^1.6.1",
         "winston": "^3.2.1"
     },
     "devDependencies": {
@@ -26,5 +29,18 @@
         "eslint-plugin-node": "^9.1.0",
         "eslint-plugin-promise": "^4.2.1",
         "eslint-plugin-standard": "^4.0.0"
+    },
+    "scripts": {
+        "build": "rm -rf build && pkg . --out-path build",
+        "postbuild": "cp -R ./node_modules/puppeteer/.local-chromium build/chromium"
+    },
+    "pkg": {
+        "scripts": [
+            "lib/sources/*.js",
+            "node_modules/puppeteer/lib/*.js"
+        ],
+        "targets": [
+            "node10-win-x64"
+        ]
     }
 }
