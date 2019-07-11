@@ -1,33 +1,53 @@
 {
     "name": "mitekosuru",
+    "description": "A command-line interface for downloading comics",
     "version": "1.0.0",
-    "repository": "https://github.com/moffeemoffee/mitekosuru",
-    "author": "Femo Bayani <festbawi@gmail.com>",
-    "license": "MIT",
-    "private": true,
-    "preferGlobal": true,
+    "license": "ISC",
+    "author": "Femo Bayani <festbawi@gmail.com> (https://github.com/moffeemoffee)",
+    "homepage": "https://github.com/moffeemoffee/mitekosuru",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/moffeemoffee/mitekosuru"
+    },
+    "bugs": {
+      "url": "https://github.com/moffeemoffee/mitekosuru/issues"
+    },
     "bin": {
-        "mitekosuru": "./bin/index.js"
+        "mitekosuru": "./bin/mitekosuru.js"
+    },
+    "scripts": {
+        "build": "rm -rf build && pkg . --out-path build",
+        "postbuild": "cp -R ./node_modules/puppeteer/.local-chromium build/chromium"
     },
     "dependencies": {
         "chalk": "^2.4.2",
+        "cheerio": "^1.0.0-rc.3",
+        "cheerio-get-css-selector": "^2.0.0",
         "commander": "^2.20.0",
+        "fs-extra": "^8.1.0",
+        "inquirer": "^6.4.1",
         "lodash": "^4.17.11",
         "ora": "^3.4.0",
-        "winston": "^3.2.1",
-        "x-ray": "^2.3.3"
+        "parse-numeric-range": "^0.0.2",
+        "puppeteer": "^1.18.1",
+        "sanitize-filename": "^1.6.1",
+        "winston": "^3.2.1"
     },
     "devDependencies": {
-        "babel-eslint": "^10.0.2",
         "eslint": "^5.16.0",
-        "eslint-config-airbnb-base": "^13.2.0",
-        "eslint-config-prettier": "^6.0.0",
         "eslint-config-standard": "^12.0.0",
         "eslint-plugin-import": "^2.18.0",
         "eslint-plugin-node": "^9.1.0",
-        "eslint-plugin-prettier": "^3.1.0",
         "eslint-plugin-promise": "^4.2.1",
-        "eslint-plugin-standard": "^4.0.0",
-        "prettier": "^1.18.2"
+        "eslint-plugin-standard": "^4.0.0"
+    },
+    "pkg": {
+        "scripts": [
+            "lib/sources/*.js",
+            "node_modules/puppeteer/lib/*.js"
+        ],
+        "targets": [
+            "node10-win-x64"
+        ]
     }
 }
