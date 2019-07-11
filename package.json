@@ -1,7 +1,7 @@
 {
     "name": "mitekosuru",
     "description": "A command-line interface for downloading comics",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "license": "ISC",
     "author": "Femo Bayani <festbawi@gmail.com> (https://github.com/moffeemoffee)",
     "homepage": "https://github.com/moffeemoffee/mitekosuru",

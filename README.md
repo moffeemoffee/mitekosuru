@@ -2,6 +2,10 @@
 
 Mitekosuru is a (work-in-progress) command-line interface for downloading comics such as manga, manhua, and manhwa.
 
+## Prerequisites
+
+* [Node.js](https://nodejs.org/en/)
+
 ## Install
 
 ```
