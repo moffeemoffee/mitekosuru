@@ -5,7 +5,7 @@ const program = require('commander')
 
 const download = require('../lib/download')
 
-program.version(pckg.version, '-v, --version')
+// program.version(pckg.version, '-v, --version')
 
 program
   .command('download <link>', { isDefault: true })
