@@ -3,6 +3,7 @@
 const program = require('commander')
 
 const download = require('../lib/download')
+require('../utils/logger')()
 
 program
   .command('download <link>', { isDefault: true })
