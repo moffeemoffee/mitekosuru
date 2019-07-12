@@ -20,6 +20,7 @@
         "postbuild": "cp -R ./node_modules/puppeteer/.local-chromium build/chromium"
     },
     "dependencies": {
+        "await-sleep": "^0.0.1",
         "chalk": "^2.4.2",
         "cheerio": "^1.0.0-rc.3",
         "cheerio-get-css-selector": "^2.0.0",
@@ -29,6 +30,7 @@
         "lodash": "^4.17.11",
         "ora": "^3.4.0",
         "parse-numeric-range": "^0.0.2",
+        "pretty-ms": "^5.0.0",
         "puppeteer": "^1.18.1",
         "sanitize-filename": "^1.6.1",
         "winston": "^3.2.1"
