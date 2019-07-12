@@ -1,6 +1,8 @@
 const chalk = require('chalk')
 const { createLogger, format, transports } = require('winston')
 
+const pckg = require('./../package.json')
+
 module.exports = createLogger({
   level: 'info',
   format: format.combine(
@@ -9,7 +11,7 @@ module.exports = createLogger({
       format: 'YYYY-MM-DD HH:mm:ss',
     }),
     format.printf(
-      (info) => `[${chalk.magenta('Mitekosuru')}] ${info.timestamp} ${info.level}: ${info.message}`
+      (info) => `[${chalk.magenta(`mitekosuru@${pckg.version}`)}] ${info.timestamp} ${info.level}: ${info.message}`
     )
   ),
   transports: [new transports.Console({ level: 'info' })],
