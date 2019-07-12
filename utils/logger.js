@@ -14,7 +14,7 @@ module.exports = (level = null) => {
           format: 'YYYY-MM-DD HH:mm:ss',
         }),
         format.printf(
-          (info) => `${loggerPrefix} ${info.timestamp} ${info.level}: ${info.message}`
+          info => `${loggerPrefix} ${info.timestamp} ${info.level}: ${info.message}`
         )
       ),
       transports: [new transports.Console({ level: level })],

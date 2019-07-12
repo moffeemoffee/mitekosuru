@@ -21,7 +21,6 @@
         "array-element-newline": ["error", {
             "multiline": true
         }],
-        "arrow-parens": ["error", "always"],
         "comma-dangle": ["error", "always-multiline"],
         "function-paren-newline": ["error", "multiline-arguments"],
         "newline-per-chained-call": ["error", {
