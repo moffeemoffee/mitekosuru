@@ -1,7 +1,7 @@
 {
     "name": "mitekosuru",
     "description": "A command-line interface for downloading comics",
-    "version": "1.0.3",
+    "version": "1.1.0",
     "license": "ISC",
     "author": "Femo Bayani <festbawi@gmail.com> (https://github.com/moffeemoffee)",
     "homepage": "https://github.com/moffeemoffee/mitekosuru",
@@ -20,6 +20,7 @@
         "postbuild": "cp -R ./node_modules/puppeteer/.local-chromium build/chromium"
     },
     "dependencies": {
+        "await-sleep": "^0.0.1",
         "chalk": "^2.4.2",
         "cheerio": "^1.0.0-rc.3",
         "cheerio-get-css-selector": "^2.0.0",
@@ -29,13 +30,14 @@
         "lodash": "^4.17.11",
         "ora": "^3.4.0",
         "parse-numeric-range": "^0.0.2",
+        "pretty-ms": "^5.0.0",
         "puppeteer": "^1.18.1",
         "sanitize-filename": "^1.6.1",
         "winston": "^3.2.1"
     },
     "devDependencies": {
-        "eslint": "^5.16.0",
-        "eslint-config-standard": "^12.0.0",
+        "eslint": "^6.0.1",
+        "eslint-config-standard": "^13.0.1",
         "eslint-plugin-import": "^2.18.0",
         "eslint-plugin-node": "^9.1.0",
         "eslint-plugin-promise": "^4.2.1",

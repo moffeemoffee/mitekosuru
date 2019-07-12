@@ -1,11 +1,9 @@
 #!/usr/bin/env node
 
-const pckg = require('./../package.json')
 const program = require('commander')
 
 const download = require('../lib/download')
-
-// program.version(pckg.version, '-v, --version')
+require('../utils/logger')()
 
 program
   .command('download <link>', { isDefault: true })

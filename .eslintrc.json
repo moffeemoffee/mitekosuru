@@ -1,15 +1,12 @@
 {
     "env": {
+        "browser": true,
         "commonjs": true,
         "es6": true,
         "node": true
     },
-    "plugins": [
-        "import"
-    ],
-    "extends": [
-        "standard"
-    ],
+    "plugins": ["import"],
+    "extends": ["standard"],
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
@@ -18,7 +15,17 @@
         "ecmaVersion": 2019
     },
     "rules": {
-        "arrow-parens": ["error", "always"],
-        "comma-dangle": ["error", "always-multiline"]
+        "array-bracket-newline": ["error", {
+            "multiline": true
+        }],
+        "array-element-newline": ["error", {
+            "multiline": true
+        }],
+        "arrow-parens": ["error", "as-needed"],
+        "comma-dangle": ["error", "always-multiline"],
+        "function-paren-newline": ["error", "multiline-arguments"],
+        "newline-per-chained-call": ["error", {
+            "ignoreChainWithDepth": 3
+        }]
     }
 }
